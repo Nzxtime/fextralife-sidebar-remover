@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1b
 // @description  Removes the sidebar from fextralife wiki
-// @author       snay@snay.me
+// @author       snay@snay.me, Nzxtime
 // @match        https://*.wiki.fextralife.com/*
 // @grant        none
 // ==/UserScript==
@@ -13,4 +13,6 @@
     sidebar.parentNode.removeChild(sidebar);
     var wrapper = document.getElementById('wrapper');
     wrapper.style.paddingLeft = 0;
+    var discussion = document.getElementById('discussions-section');
+    discussion.parentNode.removeChild(discussion);
 })();
